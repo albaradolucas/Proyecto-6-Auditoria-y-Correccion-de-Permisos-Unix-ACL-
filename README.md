@@ -15,7 +15,7 @@ Diseñar un script que audite y, opcionalmente, corrija permisos y propietarios 
   - Verificar propietario (`chown`), grupo, y modo (`chmod`).
   - Registrar en `/var/log/perm_audit.log` una línea por ejecución con el siguiente formato:
 
-fecha | ruta | owner_actual->owner_esperado | group_actual->group_esperado | modo_actual->modo_esperado | ESTADO: OK|ERROR
+`fecha | ruta | owner_actual->owner_esperado | group_actual->group_esperado | modo_actual->modo_esperado | ESTADO: OK|ERROR`
 
 
 - Si se pasa el flag `--fix`, debe **corregir** los desvíos detectados aplicando `chown`/`chmod`, registrando además:
